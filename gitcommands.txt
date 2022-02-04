@@ -1,0 +1,92 @@
+git config --global user.name Sam
+
+git config --global user.email sam.a863.nz@gmail.com
+
+touch .gitignore (to ignore files which need not to be uploaded)
+
+git init
+
+git add .
+
+git commit -m "initial commit"
+
+git remote add origin git@github.com:sama863nz/javascript.git
+
+git push origin master (this will fail because the project was initialised as private)
+
+
+(to generate key a new SSH key to convert to give access to my project which is created as private)
+$ ssh-keygen -t ed25519 -C "sam.a863.nz@gmail.com"
+
+(the above will generate a public key and save it in a folder in the local computer)
+
+(to copy the path and generate the SSH key)
+cat /c/Users/sanjeev.agarwal/.ssh/id_ed25519.pub
+
+(SSH key will look something like below. This needs to be pasted inside the git terminal)
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIzk/IlXoYrSOamLNh/zl9RJadLmtN5QGGlNnKhW2kav sam.a863.nz@gmail.com
+
+(to push the files to github)
+git push origin master
+
+git status (optional, to check the status)
+
+
+------------------------------------------------------------------------------------------------------
+
+# to make a folder non trackable
+rm -rf git
+
+# to clone a github directory to your local
+(git clone https-github local-directory-name)
+git clone git@github.com:sama863nz/javascript.git javascript
+
+
+# to restore the changes from a file
+git restore <filename>
+
+#present workign directory
+pwd
+
+# list/contents of the folder
+ls
+
+#change of directory
+cd ""
+
+cd .. (to move up towards the root folder - one step)
+cd / (to move up towards the root folder - at the root level)
+
+git diff (compares staging with working directory)
+git diff --staged (compares staging with last commit)
+
+git log
+git log -p (will show all the changes)
+git log --stat
+
+
+VIM editor + AMEND
+1. git commit --amend (to add a change to an existing file)
+2. press i (to add changes on VIM editor)
+3. press esc
+4. type :wq (to save and exit)
+
+
+
+
+git commit -a -m (will commit all the TRACKED files but will NOT touch the untarcked files. This is only for tracked files)
+
+git rm <filename> (to delete a file)
+
+git mv <oldfilename to newfilename> (to rename a file)
+
+git rm --cached <filename> (will untrack the file. TRy adding it to .gitignore to see the difference)
+
+if a file needs to be untracked then 
+1. add it to .gitignore file
+2. git rm --cached <filename>
+
+rm -rf .git (to remove git from the folder)
+
+git clone <https://url> <newflodername> (to clone a git folder from github e.g. pandas github)
+
