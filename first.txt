@@ -2,4 +2,10 @@ sam updated
 csc
 cscccxcsx
 master
+<<<<<<< HEAD
 Sam updated once more
+=======
+for master
+by master 
+to master
+>>>>>>> master
